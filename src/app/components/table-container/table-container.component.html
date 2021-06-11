@@ -1,0 +1,20 @@
+
+  <app-message-box [type]="winner ? 'success': 'danger'" [message]="message" *ngIf="message"></app-message-box>
+  <span class="credits">Credits: {{getCredits()}}</span>
+  <span class="account">Account: {{getAccount()}}</span>
+  <div class="card table-container">
+    <div class="row">
+      <div class="col-sm-4">
+          <app-slot-item [letter]="firstBox"></app-slot-item>
+      </div>
+      <div class="col-sm-4">
+          <app-slot-item [letter]="secondBox"></app-slot-item>
+      </div>
+      <div class="col-sm-4">
+          <app-slot-item [letter]="thirdBox"></app-slot-item>
+      </div>
+    </div>
+  </div>
+<br>
+<button class="btn btn-info" (click)="rollSlots()">Roll</button>&nbsp;
+<button class="btn btn-success" (click)="checkout()">CASH OUT</button>

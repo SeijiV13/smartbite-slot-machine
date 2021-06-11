@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+body,
+html {
+  height: 100%;
+}
+.table-container {
+  // position: absolute;
+  width: 500px;
+  height: 200px;
+  display: table-cell;
+  vertical-align: middle;
+  box-shadow: -1px 7px 37px -17px rgba(0,0,0,0.75);
+
+}
+.outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.slot-item {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 60px;
+  border-style: solid;
+  margin: auto;
+}
+
+.credits {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.account {
+  font-weight: 500;
+  font-size: 20px;
+  float:right;
+}
+
+.alert {
+  text-align: center;
+}
