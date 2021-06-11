@@ -10,6 +10,8 @@ import { CheckoutService } from 'src/app/shared/services/checkout.service';
   templateUrl: './table-container.component.html',
   styleUrls: ['./table-container.component.scss']
 })
+
+// smart component that containes the three boxes
 export class TableContainerComponent implements OnInit {
   firstBox =  "C";
   secondBox = "L";
@@ -24,6 +26,7 @@ export class TableContainerComponent implements OnInit {
   ngOnInit() {
   }
 
+  // this will call roll slots and fetch the results
   rollSlots() {
      this.rollService.rollSlots(this.sessionService.getSesssionId()).subscribe((data: Roll) => {
         this.firstBox = data.boxes[0];
@@ -39,7 +42,7 @@ export class TableContainerComponent implements OnInit {
       }
      );
   }
-
+  // this will checkout the remaing credits
   checkout() {
       this.checkoutService.checkoutCredits(this.sessionService.getSesssionId())
       .subscribe((data: {session: Session, message: string}) => {
